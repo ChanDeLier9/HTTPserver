@@ -1,0 +1,30 @@
+{
+  "server": {
+    "address": "127.0.0.1",
+    "port": 8080
+  },
+  "routes": [
+    { "path": "/", "type": "static", "file": "index.html" },
+    { "path": "/search", "type": "search" },
+    { "path": "/secured", "type": "basic_auth" },
+    { "path": "/session", "type": "session_auth" },
+    { "path": "/jwt", "type": "jwt_auth" }
+  ],
+  "log": {
+    "level": "DEBUG",
+    "system_log": "system.log",
+    "access_log": "access.log"
+  },
+  "auth": {
+    "username": "admin",
+    "password": "123456"
+  },
+  "session": {
+    "secret": "session_secret_key",
+    "timeout": 1800
+  },
+  "jwt": {
+    "secret": "jwt_secret_key",
+    "expire": 3600
+  }
+} 
